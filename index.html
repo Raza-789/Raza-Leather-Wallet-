@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ur" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raza Leather — Premium Leather Wallets</title>
+<meta name="description" content="Raza Leather — Luxury handcrafted leather wallets. Order via WhatsApp across Pakistan.">
+<meta property="og:title" content="Raza Leather — Premium Leather Wallets">
+<meta property="og:description" content="Premium leather wallets for every style & budget. Nationwide delivery via WhatsApp.">
+<meta property="og:image" content="hero-placeholder.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* ========== GLOBAL STYLES ========== */
+:root{
+  --bg-dark:#0c0805;
+  --bg-leather:#1a1208;
+  --accent:#cfa45b;
+  --accent-light:#ffdba8;
+  --text-light:#fff;
+  --glass: rgba(255,255,255,0.03);
+  --radius:16px;
+  --max-width:1100px;
+  --wa-green:#25D366;
+  --shadow-glow:0 0 12px rgba(207,164,91,0.28);
+}
+html,body{margin:0;padding:0;font-family:Inter,sans-serif;background:var(--bg-dark);color:var(--text-light);scroll-behavior:smooth;}
+h1,h2,h3,h4,h5,h6{font-family:"Playfair Display",serif;margin:0;}
+a{text-decoration:none;color:inherit;}
+img{display:block;width:100%;height:auto;max-width:100%;}
+
+/* LEATHER ANIMATED BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:radial-gradient(circle at 10% 10%, rgba(255,215,160,0.02), transparent 8%),linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.7));
+}
+.leather-grain{
+  position:fixed;inset:0;z-index:-1;opacity:.25;mix-blend-mode:overlay;
+  background-image:radial-gradient(circle at 40% 30%, rgba(0,0,0,0.02), transparent 12%),repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0 2px, transparent 2px 6px);
+  animation:grainMove 8s linear infinite;
+}
+@keyframes grainMove{0%{transform:translate(0,0)}50%{transform:translate(-6px,6px)}100%{transform:translate(0,0)}}
+
+/* ===== HEADER ===== */
+header{position:sticky;top:0;width:100%;backdrop-filter:blur(8px);background:rgba(0,0,0,0.4);border-bottom:1px solid rgba(207,164,91,0.08);z-index:50;}
+.navbar{max-width:var(--max-width);margin:0 auto;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;}
+.nav-left{display:flex;align-items:center;gap:12px;}
+.nav-logo{width:46px;height:46px;border-radius:12px;overflow:hidden;}
+.nav-right{display:flex;align-items:center;gap:10px;}
+button{cursor:pointer;font-family:inherit;border:none;border-radius:10px;padding:10px 14px;transition:all .25s ease;display:inline-flex;align-items:center;gap:6px;}
+button:focus{outline:none;box-shadow:0 0 0 4px rgba(207,164,91,0.2);}
+
+/* Header buttons */
+.btn-wa{background:var(--wa-green);color:#111;font-weight:700;box-shadow:0 6px 12px rgba(37,211,102,0.16);}
+.cart-btn{position:relative;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);color:var(--accent);}
+.cart-count{position:absolute;top:-6px;right:-6px;background:var(--accent);color:#111;padding:2px 6px;border-radius:999px;font-size:12px;font-weight:700;}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:0 12px;}
+.hero-content{max-width:680px;background:rgba(255,255,255,0.03);backdrop-filter:blur(6px);padding:32px 18px;border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,0.6);}
+.hero-title{font-size:3rem;color:var(--accent);margin-bottom:8px;animation:logoEntrance 3s ease forwards;}
+@keyframes logoEntrance{0%{opacity:0;transform:translateY(-20px) rotateX(-30deg)}100%{opacity:1;transform:translateY(0) rotateX(0)}}
+.hero-sub{margin-bottom:18px;color:rgba(255,255,255,0.85);}
+.hero-ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.primary-cta{background:linear-gradient(90deg,var(--accent),var(--accent-light));color:#111;font-weight:700;box-shadow:var(--shadow-glow);}
+.secondary-cta{border:1px solid rgba(207,164,91,0.14);color:var(--accent);background:transparent;}
+
+/* ===== PRODUCTS GRID ===== */
+.products{padding:48px 12px;max-width:var(--max-width);margin:0 auto;}
+.products-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:18px;margin-top:24px;}
+@media(min-width:640px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.products-grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:12px;display:flex;flex-direction:column;gap:8px;transition:transform .28s ease,box-shadow .28s ease;}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 36px rgba(207,164,91,0.4);}
+.card-img{border-radius:12px;overflow:hidden;aspect-ratio:1.6/1;background:#111;display:flex;align-items:center;justify-content:center;}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s;}
+.card:hover .card-img img{transform:scale(1.03);}
+.card-chip{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px;color:var(--accent);border:1px solid rgba(207,164,91,0.08);}
+.card-title{font-size:1.1rem;color:#fff;}
+.card-desc{font-size:0.85rem;color:rgba(255,255,255,0.78);}
+.card-actions{display:flex;gap:6px;margin-top:auto;flex-wrap:wrap;}
+.small-btn{font-size:12px;padding:6px 10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff;}
+
+/* ===== MODAL ===== */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;z-index:90;padding:12px;}
+.modal.open{display:flex;}
+.modal-card{width:100%;max-width:900px;background:rgba(0,0,0,0.95);border-radius:20px;padding:18px;display:grid;grid-template-columns:1fr;gap:12px;}
+@media(min-width:900px){.modal-card{grid-template-columns:1fr 1fr}}
+.modal-gallery{border-radius:12px;overflow:hidden;background:#111;display:flex;flex-direction:column;gap:8px;}
+.main-img{width:100%;aspect-ratio:1.4/1;background:#111;display:flex;align-items:center;justify-content:center;}
+.thumbs{display:flex;gap:8px;overflow:auto;padding-bottom:6px;}
+.thumbs img{height:56px;border-radius:8px;cursor:pointer;border:2px solid transparent;}
+.thumbs img[aria-pressed="true"]{border-color:var(--accent);}
+.modal-meta h3{color:var(--accent);margin-top:0;}
+.modal-meta p{color:rgba(255,255,255,0.9);}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;}
+
+/* ===== CART SLIDEOVER ===== */
+.cart-panel{position:fixed;right:0;top:0;height:100vh;width:340px;transform:translateX(110%);transition:transform .36s cubic-bezier(.2,.9,.3,1);z-index:95;background:rgba(17,15,14,0.98);padding:18px;box-shadow:-24px 0 60px rgba(0,0,0,0.6);}
+.cart-panel.open{transform:translateX(0);}
+.cart-items{display:flex;flex-direction:column;gap:12px;margin-top:12px;max-height:58vh;overflow:auto;padding-right:8px;}
+.cart-item{display:flex;gap:8px;align-items:center;}
+.cart-item img{width:64px;height:48px;object-fit:cover;border-radius:8px;}
+.qty{display:inline-flex;align-items:center;gap:6px;}
+.qty button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px;border-radius:6px;color:#fff;}
+
+/* ===== FLOATING WHATSAPP ===== */
+#floatingWa{position:fixed;right:18px;bottom:18px;border-radius:999px;background:var(--wa-green);border:0;padding:12px;z-index:60;font-weight:700;animation:pulse 1.8s infinite;}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+
+/* ===== FOOTER ===== */
+footer{padding:28px 12px;margin-top:30px;border-top:1px solid rgba(255,255,255,0.02);text-align:center;color:rgba(255,255,255,0.75);}
+footer a{color:var(--accent);margin:0 6px;font-size:13px;}
+
+</style>
+</head>
+<body>
+
+<div class="leather-grain" aria-hidden="true"></div>
+
+<!-- HEADER -->
+<header>
+<div class="navbar container">
+  <div class="nav-left">
+    <div class="nav-logo">
+      <!-- PLACEHOLDER: Replace with SVG or MP4 animation logo -->
+      <img src="https://i.postimg.cc/cC44N41h/file-000000008fb472068ace86dfc402352e.png" alt="Raza Leather Logo" />
+    </div>
+  </div>
+  <div class="nav-right">
+    <button class="cart-btn" id="cartToggle" aria-label="View Cart">🛒<span class="cart-count" id="cartCount">0</span></button>
+    <button class="btn-wa" onclick="openWhatsApp('Hello Raza Leather!')">💬 Connect on WhatsApp</button>
+  </div>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero" role="region" aria-label="Hero" style="position:relative;overflow:hidden;padding:60px 0;">
+  <div class="container" style="text-align:center;position:relative;">
+
+    <!-- Animated floating logo image -->
+    <div class="hero-logo" style="margin:0 auto 24px auto;width:160px;">
+      <img src="https://i.postimg.cc/cC44N41h/file-000000008fb472068ace86dfc402352e.png" alt="Raza Leather Logo" style="width:100%;height:auto;display:block;">
+    </div>
+
+    <!-- Hero title -->
+    <h1 class="hero-title" style="font-size:3.5rem;letter-spacing:4px;color:var(--accent);opacity:0;">
+      RAZA LEATHER
+    </h1>
+
+    <!-- Tagline -->
+    <p class="hero-sub" style="font-size:1.2rem;color:rgba(255,255,255,0.85);margin-top:12px;opacity:0;">
+      Premium Leather Wallets for Every Style & Budget.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-ctas" style="display:flex;gap:12px;justify-content:center;margin-top:24px;opacity:0;">
+      <button class="primary-cta" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">🛒 Shop Wallets</button>
+      <button class="secondary-cta" onclick="openWhatsApp('Hello Raza Leather — I want to order')">💬 Connect on WhatsApp</button>
+    </div>
+
+    <!-- Animated floating leather texture -->
+    <div class="hero-grain" aria-hidden="true" style="
+      position:absolute;inset:0;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255,215,160,0.02), transparent 8%),
+        repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0 2px, transparent 2px 6px);
+      opacity:0.25;
+      mix-blend-mode:overlay;
+      pointer-events:none;
+    "></div>
+  </div>
+
+  <!-- HERO CSS + JS embedded -->
+  <style>
+    /* ====== HERO ANIMATIONS ====== */
+    .hero-logo { animation:logoFloat 4s ease-in-out infinite; }
+    @keyframes logoFloat {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .hero-title,.hero-sub,.hero-ctas { animation:fadeInUp 1.8s forwards; }
+    .hero-title { animation-delay:0.3s; }
+    .hero-sub { animation-delay:0.6s; }
+    .hero-ctas { animation-delay:0.9s; }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(24px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-grain { animation:grainMove 8s linear infinite; }
+    @keyframes grainMove {
+      0% { transform: translate3d(0,0,0); }
+      50% { transform: translate3d(-6px,6px,0); }
+      100% { transform: translate3d(0,0,0); }
+    }
+  </style>
+
+  <script>
+    // Hero fade-in for title, subtitle, CTAs
+    document.addEventListener('DOMContentLoaded',()=>{
+      const title = document.querySelector('.hero-title');
+      const sub = document.querySelector('.hero-sub');
+      const ctas = document.querySelector('.hero-ctas');
+      // Ensure delays same as CSS animations
+      setTimeout(()=>{title.style.opacity='1';},300);
+      setTimeout(()=>{sub.style.opacity='1';},600);
+      setTimeout(()=>{ctas.style.opacity='1';},900);
+    });
+  </script>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section id="products" class="products">
+<div class="products-grid" id="productGrid">
+  <!-- JS will populate product cards with images, name, description, chip -->
+</div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-gallery">
+      <div class="main-img" id="modalMain"></div>
+      <div class="thumbs" id="modalThumbs"></div>
+    </div>
+    <div class="modal-meta">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <p id="modalDetails"></p>
+      <div class="modal-actions">
+        <button class="small-btn" onclick="addToCart()">Add to Cart</button>
+        <button class="small-btn" onclick="orderWhatsApp()">Order on WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART PANEL -->
+<div class="cart-panel" id="cartPanel" aria-hidden="true">
+  <h3>Cart</h3>
+  <div class="cart-items" id="cartItems"></div>
+  <div style="margin-top:12px;">
+    <button class="primary-cta" onclick="checkoutWhatsApp()">Confirm via WhatsApp</button>
+    <button class="secondary-cta" onclick="showQuickPay()">Pay Now</button>
+  </div>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<button id="floatingWa" aria-label="Order on WhatsApp" onclick="openWhatsApp('Hello Raza Leather — I want to order')">💬</button>
+
+<!-- FOOTER -->
+<footer>
+  <div style="margin-bottom:12px;font-weight:700">Raza Leather — Quality You Can Feel.</div>
+  <div>
+    <a href="#">About</a>•<a href="#">Contact</a>•<a href="#">Shipping</a>•<a href="#">Returns</a>•<a href="#">Terms</a>
+  </div>
+  <div style="margin-top:6px;font-size:12px">© <span id="year"></span> Raza Leather. All rights reserved.</div>
+</footer>
+
+<script>
+// ========== JS PLACEHOLDERS ==========
+
+document.getElementById('year').innerText = new Date().getFullYear();
+
+function openWhatsApp(message){
+  const url = 'https://wa.me/923273756275?text=' + encodeURIComponent(message);
+  window.open(url,'_blank');
+}
+
+// Product cards example (Regular + Ladies)
+const products = [
+  // Regular Wallets
+  {id:1,name:"Classic Fold",desc:"Elegant leather fold wallet",chip:"Cow Leather",img:"https://i.postimg.cc/9XZFsKmz/images-(2).jpg",price:"500",category:"Regular"},
+  {id:2,name:"Slim Card Holder",desc:"Minimalist card wallet",chip:"Premium",img:"https://i.postimg.cc/xjvn6m5f/xcfvdfv-900x.jpg",price:"700",category:"Regular"},
+  {id:3,name:"Travel Organizer",desc:"Full leather travel companion",chip:"Leather Ship",img:"https://i.postimg.cc/26NgWHPW/images-(3).jpg",price:"1200",category:"Regular"},
+  
+  // Ladies Wallets
+  {id:4,name:"Elegant Ladies Fold",desc:"Compact luxury wallet for ladies",chip:"Premium",img:"https://i.postimg.cc/xTQFnxmw/H13414790193e4213a4316b003a684c4fi.jpg",price:"850",category:"Ladies"},
+  {id:5,name:"Fashion Cardholder",desc:"Slim stylish ladies wallet",chip:"Cow Leather",img:"https://i.postimg.cc/mDw1Mgdx/Vintage-Womens-Leather-Card-Holder-Wallet-For-Ladies-Cowhide-ded85a6a-0a00-4c3f-bcb7-09453db54dcc-10.jpg",price:"900",category:"Ladies"},
+  {id:6,name:"Ladies Travel Organizer",desc:"Premium leather travel wallet",chip:"Leather Ship",img:"https://i.postimg.cc/BbRS1WGq/images-(4).jpg",price:"1300",category:"Ladies"}
+];
+
+const grid = document.getElementById('productGrid');
+
+// Clear grid first (optional)
+grid.innerHTML = '';
+
+// Optional: add category headings dynamically
+const categories = [...new Set(products.map(p=>p.category))]; // ["Regular","Ladies"]
+
+categories.forEach(cat=>{
+  const heading = document.createElement('h3');
+  heading.innerText = cat + " Wallets";
+  heading.style.color = 'var(--accent)';
+  heading.style.margin = '18px 0 8px 0';
+  heading.style.fontFamily = '"Playfair Display", serif';
+  grid.appendChild(heading);
+
+  products.filter(p=>p.category===cat).forEach(p=>{
+    const card = document.createElement('div'); card.className='card';
+    card.innerHTML=`
+      <div class="card-img"><img loading="lazy" src="${p.img}" alt="${p.name}"></div>
+      <div class="chip">${p.chip}</div>
+      <div class="card-title">${p.name}</div>
+      <div class="card-desc">${p.desc}</div>
+      <div class="card-actions">
+        <button class="small" onclick="openModal(${p.id})">Details</button>
+        <button class="small" onclick="addToCart(${p.id})">Add to Cart</button>
+        <button class="small" onclick="openWhatsApp('Hello! I want to order: ${p.name}, Qty: 1')">WhatsApp</button>
+      </div>`;
+    grid.appendChild(card);
+  });
+});
+
+// Modal logic
+function openModal(id){
+  const product = products.find(p=>p.id===id);
+  document.getElementById('modalTitle').innerText = product.name;
+  document.getElementById('modalDesc').innerText = product.desc;
+  document.getElementById('mPrice').innerText = `Price: Rs. ${product.price}`;
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+
+// Cart logic
+let cart = [];
+function addToCart(id){
+  const product = products.find(p=>p.id===id);
+  if(product) cart.push(product);
+  document.getElementById('cartCount').innerText = cart.length;
+}
+function toggleCart(){document.getElementById('cartPanel').classList.toggle('open');}
+function checkoutWhatsApp(){
+  let msg = 'Hello Raza Leather — I want to order:\n';
+  cart.forEach(p=>msg+=`- ${p.name} (Qty:1)\n`);
+  openWhatsApp(msg);
+}
+function showQuickPay(){alert('Show Easypaisa / JazzCash / Bank QR images slider');}
+</script>
+
+</body>
+  </html>
